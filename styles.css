@@ -65,3 +65,20 @@ img { max-width: 100%; height: auto; display: block; }
 .icon-btn:hover { transform: translateY(-1px); border-color: var(--muted); }
 .icon { width: 22px; height: 22px; }
 .muted { color: var(--muted); font-size: 0.95rem; }
+
+
+/* Brand left, nav pushed to the right */
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Horizontal nav */
+.site-nav { display: flex; gap: 16px; }
+.site-nav a { padding: 8px 10px; border-radius: 8px; }
+.site-nav a:hover { background: rgba(2, 6, 23, 0.04); }
+
+@media (prefers-color-scheme: dark) {
+  .site-nav a:hover { background: rgba(148, 163, 184, 0.12); }
+}
