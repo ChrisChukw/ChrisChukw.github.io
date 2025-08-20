@@ -27,12 +27,22 @@
         <span class="site-title">Deep Math</span>
       </a>
       
-      <nav class="site-nav" aria-label="Primary">
-        <a href="./">Home</a>
-        <a href="./research.html">Research</a>
-        <a href="./teaching.html">Teaching</a>
-        <a href="./publications.html">Publications</a>
+      <!-- Hamburger toggle (mobile) -->
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <!-- three bars -->
+    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" fill="currentColor"/>
+    </svg>
+    </button>
+
+    <!-- Primary nav -->
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
+    <a href="./">Home</a>
+    <a href="./research.html">Research</a>
+    <a href="./teaching.html">Teaching</a>
+    <a href="./publications.html">Publications</a>
     </nav>
+
 
       
     </div>
@@ -79,6 +89,13 @@
   <script>
     // Current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.nav-toggle');
+  const root   = document.body;
+  toggle.addEventListener('click', () => {
+    const open = root.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
   </script>
 </body>
 </html>
