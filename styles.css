@@ -62,6 +62,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: relative; /* anchor mobile dropdown */
 }
 
+
 /* Hamburger button (mobile) */
 .nav-toggle {
   display: inline-flex;
@@ -74,6 +75,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--fg);
   cursor: pointer;
 }
+
 
 /* Base nav styles */
 .site-nav a {
