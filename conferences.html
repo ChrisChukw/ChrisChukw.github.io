@@ -1,75 +1,70 @@
+---
+permalink: /conferences/
+title: Conferences — Deep Math
+layout: null
+---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Deep Math — Christopher C. Chukwuemeka</title>
+  <title>Conferences — Deep Math</title>
 
-  <!-- Favicon: use your actual filenames; both links are fine -->
+  <!-- Favicon (same paths as index.html) -->
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/images/favicon.jpg" type="image/jpeg" sizes="192x192">
 
-  <meta name="description" content="Deep Math — notes and research." />
-  <meta property="og:title" content="Deep Math" />
-  <meta property="og:description" content="Deep Math — notes and research." />
-  <meta property="og:image" content="https://chrischukw.github.io/images/logo.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
+  <meta name="description" content="Conferences and Workshops." />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <!-- Title bar -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <a class="brand" href="/" aria-label="Deep Math home">
-        <!-- Use your own logo.svg or logo.jpg -->
-            <img class="brand-logo" src="/images/logo.svg" alt="Deep Math" />
-            <span class="site-title">Deep Math</span>
+        <img class="brand-logo" src="/images/logo.svg" alt="Deep Math" />
+        <span class="site-title">Deep Math</span>
       </a>
-      
-        <!-- Hamburger toggle (mobile view) -->
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-        <!-- three bars -->
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
         <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" fill="currentColor"/>
+          <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" fill="currentColor"/>
         </svg>
-        </button>
+      </button>
 
-        <!-- Primary nav -->
-        <nav class="site-nav" id="primary-nav" aria-label="Primary">
-            <a href="/">Home</a>
-            <a href="/research/">Research</a>
-            <a href="/teaching/">Teaching</a>
-            <a href="/conferences/">Conferences</a>
-       </nav>
-
+      <!-- Nav -->
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/research/">Research</a>
+        <a href="/teaching/" aria-current="page">Teaching</a>
+        <a href="/conferences/">Conferences</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Full-width feature image -->
-<section class="feature" style="background-image: url('/images/xris.jpg');">
-  <div class="container typeset">
-    <!-- I can add a text here... -->
-  </div>
-</section>
-
-
   <!-- Main -->
   <main class="container">
-    <section class="hero" id="home">
-      <h1>About me</h1>
+    <section class="hero" id="teaching">
+      <h1>Conferences & Workshops</h1>
+
+      <h2 style="margin-top: 1.5rem;">Conferences</h2>
+      <ul>
+        <li><a href="https://www.math.uh.edu/cbms-amml/">  CBMS Conference</a> : <strong>Research at the Interface of Applied Mathematics and Machine learning</strong>, <em> (December 2025)</em></li>
+        <!-- <li>Lab Instructor: <strong>Math 2413 — Calculus I</strong>, <em> Spring 2026</em></li>
+        <li>Grader: <strong>Math 2305 — Discrete Mathematics</strong>, <em>Fall 2025</em></li> -->
+      </ul>
+
+      <h2 style="margin-top: 1.5rem;">Workshops</h2>
+      <ul>
+         <li><a href="https://www.math.uh.edu/cbms-amml/">  SIAM UH  - Graduate workshop</a> : <strong>I led a  workshop on  how to make an academic website. <a href="https://colab.research.google.com/drive/1_A6uHVfms0_Lsbn9TMumCHIpakOUo7dk#scrollTo=7401ac52">  The colab slides are available here. </a> </strong>, <em> (October 2025).</em></li>
+          <li><a href="https://www.math.uh.edu/~andreas/teaching/chameleon-su25/">  ChAMELEON summer school</a> : <strong> I attended a one week  summer school on topics related to Computational and mAthematical MEthods in machine LEarning, Optimization and iNference </strong>, <em>  (ChAMELEON, August 2025).</em></li>
+      </ul>
+
+      <h2 style="margin-top: 1.5rem;">Contact</h2>
       <p>
-        I'm a  Mathematics PhD candidate at the <a href="https://www.uh.edu/nsm/math/">University of Houston.</a> 
-        I am currently working on diffeomorphic learning, optimal control and neural Hawkes process. I also enjoy teaching and coding challenges.
-      </p>
-       <hr>
-      <p>
-        My research interests include Scientific computing, Deep learning, numerical methods, 
-         numerical optimization, and generative modeliing.
-      </p>
-        <hr>
-      <p>
-        I currently  work under the supervision of <a href="https://www.math.uh.edu/~andreas/">  Andreas Mang.</a> 
+        Office: Philip Gutherie Hoffman Hall (PGH), Office 605<br>
+        E-mail: <a href="mailto:ccchukw2@cougarnet.uh.edu">ccchukw2@cougarnet.uh.edu</a>
       </p>
     </section>
   </main>
@@ -101,16 +96,16 @@
     </div>
   </footer>
 
+  <!-- Mobile nav + year -->
   <script>
-    // Current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     const toggle = document.querySelector('.nav-toggle');
-  const root   = document.body;
-  toggle.addEventListener('click', () => {
-    const open = root.classList.toggle('nav-open');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const open = document.body.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
